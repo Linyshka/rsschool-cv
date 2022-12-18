@@ -1,79 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CV</title>
   <meta name="author" content="Alina Radyukevich">
   <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&family=Roboto:wght@100;400&family=Tiro+Devanagari+Marathi:ital@1&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </nav>   
-  </header>
-  <main>
-    <div id="about">
-      <h1>Alina Radyukevich</h1>
-      <img rel="" alt="my photo">
-      <p>My goal is to become a good frontend developer. I am responsible, I work well in a team, I like to learn and constantly develop.</p>
-      <div class="skills">
-        <h2>Hard skills</h2>
+  <div class="information">
+    <header class="header">
+      <nav>
         <ul>
-          <li>HTML/CSS</li>
-          <li>C / C++ / Qt C++ / C#</li>
-          <li>Java Script (beginner)</li>
-          <li>OOP</li>
-          <li>Algorithms and data structures (realized almost all stl-library in C++)</li>
-          <li>Git</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
         </ul>
-        <h3>English level: Intermediate(B1)</h3>
+      </nav>
+    </header>
+    <main>
+      <div id="about">
+        <div class="info">
+          <img src="images/my_photo_1.jpg" alt="my photo">
+          <div class="text">
+            <h1>Alina Radyukevich</h1>
+            <p>My goal is to become a good frontend developer. I am responsible, I work well in a team, I like to learn
+              and
+              constantly develop.</p>
+          </div>
+        </div>
+        <div class="skills">
+          <h2>Hard skills</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript (beginner)</li>
+            <li>C/C++ (Standart Template Library)</li>
+            <li>Qt C++ (v. 6.2.3)</li>
+            <li>C# (.Net 6, Visual Studio)</li>
+            <li>OOP</li>
+            <li>Algorithms and data structures</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <section id="education">
+        <div class="education_info">
+          <h2>My education</h2>
+          <p>Belarusian State University of Informatics and Radioelectronics (2021-2025)</p>
+          <p>Speciality: Informatics and programming technologies</p>
+        </div>
+        <div class="languages">
+          <h2>Languages</h2>
+          <p>English - B1</p>
+          <p>Russian - native</p>
+          <p>Belorussian - native</p>
+        </div>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>Developing Desktop apps (including client interfaces) using QT C++</li>
+          <li>Implementing almost all containers from Standart Template Library C++</li>
+          <li>Developing apps following design patterns in C#</li>
+          <li>Partisapating in Simple image recognition, web-assistant projects in the role of front-end developer</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <div class="item">
+          <div class="item__text"><h2>Simple image recognition</h2></div>
+          <img class="item__img" src="images/recognition.png" alt="project_photo">
+        </div>
+        <div class="item">
+          <div class="item__text"><h2>Web-assistant</h2></div>
+          <img class="item__img" src="images/assistant.jfif" alt="project_photo">
+        </div>
+        <div class="item">
+          <div class="item__text"><h2>Human Recognition</h2></div>
+          <img class="item__img" src="images/budget_calculator.jfif" alt="project_photo">
+        </div>
+      </section>
+      <p class="link">I can't give link, because repositories are private</p>
+      <div class="code">
+        <h2>Example code on C++</h2>
+        <pre>
+          <code>
+            #include &#8249;cmath&#8250;
+            bool narcissistic( int value ) {
+              int tmp = value;
+              int count = 0;
+              while(tmp){
+                tmp /= 10;
+                count++;
+              }
+              tmp = value;
+              int result = 0;
+              while(tmp) {
+                result += pow((tmp % 10), count);
+                tmp /= 10;
+              }
+              if(result == value) return true;
+              else return false;
+            }
+          </code>
+        </pre>
+      </div>
+      <section id="certificate">
+        <div class="certificate__item">
+          <h3>JavaScript for beginners</h3>
+          <a href="https://stepik.org/cert/1817040"><img src="images/JavaScript.png" alt="sertificate"></a>
+        </div>
+        <div class="certificate__item">
+          <h3>Web technologies: entry level</h3>
+          <a href="https://stepik.org/cert/1596987"><img src="images/Web.png" alt="sertificate"></a>         
+        </div>
+      </section>
+    </main>
+    <footer id="contacts">
+      <h2>Contacts</h2>
+      <div class="contacts__info">
+      <div class="my__contact">
+        <ul>
+          <li><a href="https://github.com/Linyshka"><img src="images/github.png" alt="git"></a></li>
+          <li><a href="https://vk.com/linyshkar"><img src="images/vk.png" alt="vk"></a></li>
+          <li><a href="https://t.me/linushkar"><img src="images/telegram.png" alt="tg"></a></li>
+        </ul>
+        <p>Alina Radyukevich &#169;2022</p>
+      </div>
+      <div class="cource__link">
+        <a href="https://rs.school/js/">Link to the course</a>
+        <img src="images/logo.svg" alt="logo">
       </div>
     </div>
-    <section id="education">
-      <h2>My education</h2>
-      <p>Belarusian State University of Informatics and Radioelectronics (2021-2025)</p>
-      <p>Speciality: Informatics and programming technologies</p>
-      <h2>Cources</h2>
-      <div class="item">
-        <img rel="" alt="sertificate">
-        <h3>JavaScript for beginners</h3>
-      </div>
-      <div class="item">
-        <img rel="" alt="sertificate">
-        <h3>Web technologies: entry level</h3>
-      </div>
-    </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Code examples</p>
-      <pre>
-        <code>jhdkjw</code>
-      </pre>
-      <div class="item">
-        <img rel="" alt="first project">
-        <h3>sfhaj</h3>
-      </div>
-      <div class="item">
-        <img rel="" alt="rs-school">
-        <h3>lafjewri</h3>
-      </div>
-    </section>
-  </main>
-  <footer id="contacts">
-    <ul>
-      <a htef=""><img rel="" alt="git"></a>
-      <a htef=""><img rel="" alt="vk"></a>
-      <a htef=""><img rel="" alt="tg"></a>
-    </ul>
-    <img rel="" alt="logo">
-    <a href=""><img rel="" alt="link to the course">Link to the course</a>
-    <p>2022</p>
-  </footer>
+    </footer>
+  </div>
 </body>
+
 </html>
