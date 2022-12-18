@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CV</title>
   <meta name="author" content="Alina Radyukevich">
   <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&family=Roboto:wght@100;400&family=Tiro+Devanagari+Marathi:ital@1&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
+  <div class="information">
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="about">
+        <div class="info">
+          <img src="images/my_photo.jpg" alt="my photo">
+          <div class="text">
+            <h1>Alina Radyukevich</h1>
+            <p>My goal is to become a good front-end developer. I am responsible, I work well in a team, I like to learn
+              and
+              constantly develop.</p>
+          </div>
+        </div>
+        <div class="skills">
+          <h2>Hard skills</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript (beginner)</li>
+            <li>C/C++ (Standart Template Library)</li>
+            <li>Qt C++ (v. 6.2.3)</li>
+            <li>C# (.Net 6, Visual Studio)</li>
+            <li>OOP</li>
+            <li>Algorithms and data structures</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <section id="education">
+        <div class="education_info">
+          <h2>My education</h2>
+          <p>Belarusian State University of Informatics and Radioelectronics (2021-2025)</p>
+          <p>Speciality: Informatics and programming technologies</p>
+        </div>
+        <div class="languages">
+          <h2>Languages</h2>
+          <p>English - B1</p>
+          <p>Russian - native</p>
+          <p>Belarusian - native</p>
+        </div>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>Developing Desktop apps (including client interfaces) using QT C++</li>
+          <li>Implementing almost all containers from the Standart Template Library C++</li>
+          <li>Developing apps following design patterns in C#</li>
+          <li>Participating in Simple image recognition, web-assistant projects in the role of front-end developer</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <div class="item">
+          <div class="item__text">
+            <h2>Simple image recognition</h2>
+          </div>
+          <img class="item__img" src="images/projects/recognition.png" alt="project_photo">
+        </div>
+        <div class="item">
+          <div class="item__text">
+            <h2>Web-assistant</h2>
+          </div>
+          <img class="item__img" src="images/projects/assistant.jfif" alt="project_photo">
+        </div>
+        <div class="item">
+          <div class="item__text">
+            <h2>Budget calculator</h2>
+          </div>
+          <img class="item__img" src="images/projects/budget_calculator.jfif" alt="project_photo">
+        </div>
+      </section>
+      <p class="link">I can't give link, because repositories are private</p>
+      <div class="code">
+        <h2>Example code on C++</h2>
+        <pre>
+          <code>
+            #include &#8249;cmath&#8250;
+            bool narcissistic( int value ) {
+              int tmp = value;
+              int count = 0;
+              while(tmp){
+                tmp /= 10;
+                count++;
+              }
+              tmp = value;
+              int result = 0;
+              while(tmp) {
+                result += pow((tmp % 10), count);
+                tmp /= 10;
+              }
+              if(result == value) return true;
+              else return false;
+            }
+          </code>
+        </pre>
+      </div>
+      <section id="certificate">
+        <div class="certificate__item">
+          <h3>JavaScript for beginners</h3>
+          <a href="https://stepik.org/cert/1817040"><img src="images/courses/JavaScript.png" alt="sertificate"></a>
+        </div>
+        <div class="certificate__item">
+          <h3>Web technologies: entry level</h3>
+          <a href="https://stepik.org/cert/1596987"><img src="images/courses/Web.png" alt="sertificate"></a>
+        </div>
+      </section>
+    </main>
+    <footer id="contacts">
+      <h2>Contacts</h2>
+      <div class="contacts__info">
+        <div class="my__contact">
+          <ul>
+            <li><a href="https://github.com/Linyshka"><img src="images/icons/github.png" alt="git"></a></li>
+            <li><a href="https://vk.com/linyshkar"><img src="images/icons/vk.png" alt="vk"></a></li>
+            <li><a href="https://t.me/linushkar"><img src="images/icons/telegram.png" alt="tg"></a></li>
+          </ul>
+          <p>Alina Radyukevich &#169;2022</p>
+        </div>
+        <div class="cource__link">
+          <a href="https://rs.school/js/">Link to the course</a>
+          <img src="images/logo.svg" alt="logo">
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>
